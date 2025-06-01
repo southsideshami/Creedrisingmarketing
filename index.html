@@ -13,48 +13,116 @@
       --gray: #9CA3AF;
     }
 
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--space-black);
       color: var(--nebula-white);
+      line-height: 1.6;
     }
 
-    header, footer {
-      background: var(--centauri-blue);
-      padding: 2rem;
+    header {
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      padding: 5rem 2rem;
       text-align: center;
+      color: var(--nebula-white);
     }
 
-    h1, h2, h3 {
+    header h1 {
+      font-size: 3rem;
+      animation: fadeInDown 2s ease-in-out;
       color: var(--centauri-blue);
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .container {
       max-width: 1200px;
       margin: auto;
-      padding: 2rem;
+      padding: 3rem 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      color: var(--centauri-blue);
+      margin-bottom: 1rem;
     }
 
     .services ul {
       list-style: none;
-      padding: 0;
+      padding-left: 1rem;
+    }
+
+    .services li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
     }
 
     .services li::before {
-      content: "\2022 ";
+      content: "\2727";
+      position: absolute;
+      left: 0;
       color: var(--centauri-blue);
     }
 
-    a.button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background: var(--centauri-blue);
+    .quote-section {
+      background-color: var(--centauri-blue);
       color: var(--nebula-white);
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      text-align: center;
+      padding: 3rem 2rem;
+      border-radius: 12px;
+    }
+
+    .quote-section blockquote {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .quote-section p {
+      font-size: 1rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    footer {
+      background: var(--centauri-blue);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.25rem;
+      }
+
+      header p {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
@@ -67,7 +135,9 @@
   <section class="container">
     <h2>Our Mission</h2>
     <p>We build companies and bring your vision to life. If you’ve dreamt of owning a business that is luxurious and out of this world — Centauri is the media agency you want.</p>
+  </section>
 
+  <section class="container">
     <h2>Our Services</h2>
     <div class="services">
       <ul>
@@ -80,6 +150,11 @@
         <li>Influencer Outreach</li>
       </ul>
     </div>
+  </section>
+
+  <section class="quote-section">
+    <blockquote>“Creativity isn't found in stars — it's what makes them.”</blockquote>
+    <p>We believe every brand has its own constellation. Our mission is to map it, light it, and make it seen from Earth to Andromeda.</p>
   </section>
 
   <footer>
