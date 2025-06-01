@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CreedRising Media – Marketing with Purpose</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1E3A8A;
+      --earth: #A16207;
+      --charcoal: #111827;
+      --white: #ffffff;
+      --gray: #9CA3AF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--charcoal);
+      color: var(--white);
+    }
+
+    header, footer {
+      background: var(--blue);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1, h2, h3 {
+      color: var(--earth);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .tiers {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background-color: var(--blue);
+      padding: 2rem;
+      border-radius: 12px;
+      flex: 1 1 300px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li::before {
+      content: "\2022 ";
+      color: var(--earth);
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--earth);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CreedRising Media</h1>
+    <p>Marketing with Legacy. Powered by Creativity.</p>
+  </header>
+
+  <section class="container">
+    <h2>Our Services</h2>
+    <div class="services">
+      <ul>
+        <li>Social Media Management</li>
+        <li>Brand Strategy & Identity</li>
+        <li>Content Creation (Video & Photo)</li>
+        <li>SEO & Analytics</li>
+        <li>Ad Campaign Management</li>
+        <li>Email Marketing & Funnels</li>
+        <li>Influencer Outreach</li>
+      </ul>
+    </div>
+
+    <h2>Pricing Tiers</h2>
+    <div class="tiers">
+      <div class="card">
+        <h3>Starter</h3>
+        <p>Perfect for small businesses just getting started.</p>
+        <ul>
+          <li>Logo + Basic Branding</li>
+          <li>5 Social Posts / Month</li>
+          <li>1 Ad Campaign</li>
+        </ul>
+        <p><strong>£299/month</strong></p>
+        <a class="button" href="#">Get Started</a>
+      </div>
+
+      <div class="card">
+        <h3>Growth</h3>
+        <p>Scale your business with hands-on support.</p>
+        <ul>
+          <li>Advanced Branding</li>
+          <li>12 Social Posts / Month</li>
+          <li>SEO Setup + Ad Mgmt</li>
+        </ul>
+        <p><strong>£599/month</strong></p>
+        <a class="button" href="#">Get Started</a>
+      </div>
+
+      <div class="card">
+        <h3>Domination</h3>
+        <p>Go all-in with our full-service package.</p>
+        <ul>
+          <li>All Growth Features</li>
+          <li>Custom Video Reels</li>
+          <li>Weekly Analytics Reports</li>
+          <li>Email Funnels & Influencer Push</li>
+        </ul>
+        <p><strong>£999/month</strong></p>
+        <a class="button" href="#">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CreedRising Media. Built by the DOTS Team.</p>
+  </footer>
+</body>
+</html>
