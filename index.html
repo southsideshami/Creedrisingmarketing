@@ -98,6 +98,44 @@
       line-height: 1.8;
     }
 
+    .contact-section {
+      padding: 3rem 2rem;
+      background-color: var(--white);
+      color: var(--blue);
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-section form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      padding: 0.8rem;
+      border: 1px solid var(--blue);
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .contact-section button {
+      padding: 0.8rem;
+      background-color: var(--blue);
+      color: var(--white);
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -143,6 +181,20 @@
       <li>✔ Your One-Stop Shop for All Business Media Needs</li>
       <li>✔ We help your brand become visible to the right audience & customers</li>
     </ul>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="tel" placeholder="Contact Number" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="text" placeholder="Business Name" />
+      <input type="text" placeholder="Location" />
+      <textarea rows="4" placeholder="What are you looking for?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
