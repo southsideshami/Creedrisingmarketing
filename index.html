@@ -98,6 +98,23 @@
       line-height: 1.8;
     }
 
+    .three-columns {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: 3rem 2rem;
+      background-color: var(--white);
+      text-align: center;
+    }
+
+    .column {
+      max-width: 280px;
+    }
+
+    .column h3 {
+      margin: 1rem 0 0.5rem;
+    }
+
     .contact-section {
       padding: 3rem 2rem;
       background-color: var(--white);
@@ -144,7 +161,8 @@
     }
 
     @media (max-width: 768px) {
-      .video-row {
+      .video-row,
+      .three-columns {
         flex-direction: column;
         align-items: center;
       }
@@ -181,6 +199,22 @@
       <li>✔ Your One-Stop Shop for All Business Media Needs</li>
       <li>✔ We help your brand become visible to the right audience & customers</li>
     </ul>
+  </section>
+
+  <!-- Breakdown Columns -->
+  <section class="three-columns">
+    <div class="column">
+      <h3>Content Creation</h3>
+      <p>Enhance brand identity and engage audiences with compelling, strategic content creation.</p>
+    </div>
+    <div class="column">
+      <h3>Community Management</h3>
+      <p>Boost engagement and relationships via nurturing involved, goal-aligned communities.</p>
+    </div>
+    <div class="column">
+      <h3>Social Presence</h3>
+      <p>Elevate visibility and impact through a robust, loyal, and interactive digital presence.</p>
+    </div>
   </section>
 
   <!-- Contact Us Section -->
