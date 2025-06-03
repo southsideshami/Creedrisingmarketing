@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Media Agency</title>
+  <style>
+    :root {
+      --primary-blue: #0F52BA;
+      --black: #000000;
+      --red: #FF1C4D;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary-blue);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--white);
+    }
+
+    .cta-button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 2rem;
+      background-color: var(--red);
+      border: none;
+      color: var(--white);
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .video-section {
+      background-color: var(--black);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .video-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--primary-blue);
+    }
+
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .video-container iframe {
+      width: 320px;
+      height: 180px;
+      border-radius: 10px;
+      border: 2px solid var(--primary-blue);
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      padding: 4rem 2rem;
+      background-color: var(--primary-blue);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .stat {
+      max-width: 200px;
+    }
+
+    .stat h3 {
+      font-size: 2rem;
+      color: var(--red);
+    }
+
+    .features {
+      padding: 4rem 2rem;
+      background-color: var(--black);
+    }
+
+    .features h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--primary-blue);
+    }
+
+    .features ul {
+      list-style-type: none;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .features li {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .features li::before {
+      content: "✔";
+      color: var(--red);
+      position: absolute;
+      left: 0;
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      background-color: var(--primary-blue);
+      color: var(--white);
+    }
+
+    @media screen and (max-width: 768px) {
+      .stats {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .video-container iframe {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Elevate Your Brand with Our Media Agency</h1>
+    <p>Strategic content, powerful results. Built for brands that want to stand out.</p>
+    <button class="cta-button">Get Started</button>
+  </header>
+
+  <section class="video-section">
+    <h2>Featured Work</h2>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/yourvideo1" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/yourvideo2" frameborder="0" allowfullscreen></iframe>
+      <!-- Add more if needed -->
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat">
+      <h3>85%</h3>
+      <p>Increase in engagement</p>
+    </div>
+    <div class="stat">
+      <h3>120K+</h3>
+      <p>Video views</p>
+    </div>
+    <div class="stat">
+      <h3>24H</h3>
+      <p>Turnaround time</p>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Why Choose Us</h2>
+    <ul>
+      <li>Content strategy that converts</li>
+      <li>Full-service video production</li>
+      <li>Viral TikTok & Instagram campaigns</li>
+      <li>Flexible pricing & monthly packages</li>
+      <li>Analytics-driven results</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Media Agency. All rights reserved.
+  </footer>
+
+</body>
+</html>
