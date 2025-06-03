@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Media Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cenauri Agency</title>
   <style>
     :root {
-      --primary-blue: #0F52BA;
-      --black: #000000;
-      --red: #FF1C4D;
-      --white: #FFFFFF;
+      --blue: #0F52BA;
+      --white: #ffffff;
     }
 
     * {
@@ -20,180 +18,150 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: var(--black);
+      background-color: var(--white);
+      color: var(--blue);
+    }
+
+    .intro {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--blue);
       color: var(--white);
-      line-height: 1.6;
+      animation: fadeIn 2s ease-in-out;
     }
 
-    header {
-      background-color: var(--primary-blue);
-      padding: 4rem 2rem;
-      text-align: center;
+    .intro h1 {
+      font-size: 4rem;
+      font-weight: bold;
     }
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    header p {
+    .intro p {
       font-size: 1.2rem;
-      color: var(--white);
+      margin-top: 1rem;
+      letter-spacing: 1px;
     }
 
-    .cta-button {
-      margin-top: 1.5rem;
-      padding: 0.8rem 2rem;
-      background-color: var(--red);
-      border: none;
-      color: var(--white);
-      font-size: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     .video-section {
-      background-color: var(--black);
       padding: 4rem 2rem;
       text-align: center;
+      border-bottom: 2px solid var(--blue);
     }
 
     .video-section h2 {
       font-size: 2rem;
-      margin-bottom: 2rem;
-      color: var(--primary-blue);
+      margin-bottom: 1rem;
     }
 
-    .video-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-
-    .video-container iframe {
-      width: 320px;
-      height: 180px;
+    .video-frame {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
       border-radius: 10px;
-      border: 2px solid var(--primary-blue);
+      border: 2px solid var(--blue);
+      overflow: hidden;
     }
 
-    .stats {
-      display: flex;
-      justify-content: space-around;
+    .video-frame iframe {
+      width: 100%;
+      height: 450px;
+    }
+
+    .info-section {
       padding: 4rem 2rem;
-      background-color: var(--primary-blue);
+      background-color: var(--blue);
       color: var(--white);
       text-align: center;
     }
 
-    .stat {
-      max-width: 200px;
+    .info-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
 
-    .stat h3 {
-      font-size: 2rem;
-      color: var(--red);
-    }
-
-    .features {
-      padding: 4rem 2rem;
-      background-color: var(--black);
-    }
-
-    .features h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      color: var(--primary-blue);
-    }
-
-    .features ul {
-      list-style-type: none;
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 0;
-    }
-
-    .features li {
-      margin: 1rem 0;
+    .info-section p {
       font-size: 1.1rem;
-      position: relative;
-      padding-left: 1.5rem;
-    }
-
-    .features li::before {
-      content: "✔";
-      color: var(--red);
-      position: absolute;
-      left: 0;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
     }
 
     footer {
-      padding: 2rem;
-      text-align: center;
-      background-color: var(--primary-blue);
+      background-color: var(--blue);
       color: var(--white);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
     }
 
-    @media screen and (max-width: 768px) {
-      .stats {
-        flex-direction: column;
-        gap: 2rem;
+    @media (max-width: 768px) {
+      .video-frame iframe {
+        height: 220px;
       }
 
-      .video-container iframe {
-        width: 90%;
-        height: auto;
+      .intro h1 {
+        font-size: 2.5rem;
+      }
+
+      .info-section h2 {
+        font-size: 2rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Elevate Your Brand with Our Media Agency</h1>
-    <p>Strategic content, powerful results. Built for brands that want to stand out.</p>
-    <button class="cta-button">Get Started</button>
-  </header>
+  <!-- Animated Brand Intro -->
+  <div class="intro">
+    <h1>Cenauri</h1>
+    <p>we make the stars aligned</p>
+  </div>
 
+  <!-- Video Section 1 -->
   <section class="video-section">
-    <h2>Featured Work</h2>
-    <div class="video-container">
+    <h2>Our Creative Campaigns</h2>
+    <div class="video-frame">
       <iframe src="https://www.youtube.com/embed/yourvideo1" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Video Section 2 -->
+  <section class="video-section">
+    <h2>Client Case Studies</h2>
+    <div class="video-frame">
       <iframe src="https://www.youtube.com/embed/yourvideo2" frameborder="0" allowfullscreen></iframe>
-      <!-- Add more if needed -->
     </div>
   </section>
 
-  <section class="stats">
-    <div class="stat">
-      <h3>85%</h3>
-      <p>Increase in engagement</p>
-    </div>
-    <div class="stat">
-      <h3>120K+</h3>
-      <p>Video views</p>
-    </div>
-    <div class="stat">
-      <h3>24H</h3>
-      <p>Turnaround time</p>
+  <!-- Video Section 3 -->
+  <section class="video-section">
+    <h2>Social Ads in Action</h2>
+    <div class="video-frame">
+      <iframe src="https://www.youtube.com/embed/yourvideo3" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
 
-  <section class="features">
-    <h2>Why Choose Us</h2>
-    <ul>
-      <li>Content strategy that converts</li>
-      <li>Full-service video production</li>
-      <li>Viral TikTok & Instagram campaigns</li>
-      <li>Flexible pricing & monthly packages</li>
-      <li>Analytics-driven results</li>
-    </ul>
+  <!-- Info Section: Why Social Media Marketing -->
+  <section class="info-section">
+    <h2>The Power of Social Media Marketing</h2>
+    <p>
+      In the digital age, social media marketing isn't just an option — it's a necessity.
+      From increasing brand awareness to generating leads and sales, we help brands harness
+      platforms like TikTok, Instagram, and YouTube to build meaningful connections with audiences.
+      Our data-driven strategies, creative storytelling, and performance-focused campaigns ensure your brand not only stands out but leads the way.
+    </p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    &copy; 2025 Your Media Agency. All rights reserved.
+    &copy; 2025 Cenauri Media Agency. All rights reserved.
   </footer>
 
 </body>
