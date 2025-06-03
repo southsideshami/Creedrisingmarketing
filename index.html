@@ -25,20 +25,33 @@
     .logo-screen {
       height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       background-color: var(--blue);
       color: var(--white);
       font-size: 3rem;
-      animation: blink 2s linear forwards;
-      position: relative;
+      animation: fadeOut 3s ease-in-out forwards;
     }
 
-    @keyframes blink {
-      0% { opacity: 0; }
-      25% { opacity: 1; }
-      50% { opacity: 0; }
-      75% { opacity: 1; }
+    .loader {
+      border: 4px solid var(--white);
+      border-top: 4px solid var(--blue);
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+      margin-top: 1rem;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      90% { opacity: 1; }
       100% { opacity: 0; visibility: hidden; }
     }
 
@@ -49,7 +62,7 @@
       font-size: 1.5rem;
       font-weight: bold;
       opacity: 0;
-      animation: fadeInTop 2s ease-in-out 2s forwards;
+      animation: fadeInTop 3s ease-in-out 3s forwards;
       color: var(--blue);
     }
 
@@ -171,7 +184,8 @@
 </head>
 <body>
   <div class="logo-screen">
-    Cenauri
+    <div>Cenauri</div>
+    <div class="loader"></div>
     <div class="header">Cenauri <div class="slogan">we make the stars aligned</div></div>
   </div>
 
