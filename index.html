@@ -69,6 +69,23 @@
       flex-wrap: wrap;
     }
 
+    .phone-svg {
+      position: relative;
+      width: 300px;
+      height: 600px;
+      background-color: black;
+      border-radius: 40px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .phone-svg video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 40px;
+    }
+
     .services-description {
       max-width: 500px;
     }
@@ -209,6 +226,9 @@
 
   <!-- Services Section -->
   <section class="services-section">
+    <div class="phone-svg">
+      <video src="your-video.mp4" autoplay muted loop></video>
+    </div>
     <div class="services-description">
       <h2>We Are Cenauri</h2>
       <p>We are a creative media agency with elite-level strategies in social media marketing, content creation, and modern business storytelling.</p>
