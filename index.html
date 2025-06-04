@@ -22,58 +22,21 @@
       color: var(--blue);
     }
 
-    .logo-screen {
-      height: 30vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--blue);
-      color: var(--white);
-      font-size: 3rem;
-      animation: fadeOut 3s ease-in-out forwards;
-    }
-
-    .loader {
-      border: 4px solid var(--white);
-      border-top: 4px solid var(--blue);
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      animation: spin 1s linear infinite;
-      margin-top: 1rem;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    @keyframes fadeOut {
-      0% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { opacity: 0; visibility: hidden; }
-    }
-
-    .header {
-      position: absolute;
+    .top-left-logo {
+      position: fixed;
       top: 20px;
       left: 20px;
-      font-size: 1.5rem;
-      font-weight: bold;
-      opacity: 0;
-      animation: fadeInTop 3s ease-in-out 3s forwards;
-      color: var(--blue);
+      z-index: 1000;
     }
 
-    .slogan {
-      font-size: 0.8rem;
-      margin-top: 0.3rem;
+    .top-left-logo h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.2rem;
     }
 
-    @keyframes fadeInTop {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .top-left-logo p {
+      font-size: 0.9rem;
+      font-style: italic;
     }
 
     .video-row {
@@ -199,10 +162,9 @@
   </style>
 </head>
 <body>
-  <div class="logo-screen">
-    <div>Cenauri</div>
-    <div class="loader"></div>
-    <div class="header">Cenauri <div class="slogan">we make the stars aligned</div></div>
+  <div class="top-left-logo">
+    <h1>Cenauri</h1>
+    <p>we make the stars align</p>
   </div>
 
   <!-- Video Section -->
