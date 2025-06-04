@@ -42,44 +42,21 @@
       color: var(--blue);
     }
 
-    .video-gallery {
+    .hero-video-section {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      padding: 8rem 2rem 4rem;
-      background-color: var(--white);
-      flex-wrap: wrap;
-    }
-
-    .video-card {
-      width: 300px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      position: relative;
-    }
-
-    .video-card svg {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .phone-svg {
-      position: relative;
-      width: 300px;
-      height: 600px;
+      align-items: center;
       background-color: black;
-      border-radius: 40px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
-    .phone-svg video {
+    .hero-video-section video {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 40px;
     }
 
     .services-section {
@@ -202,7 +179,6 @@
     }
 
     @media (max-width: 768px) {
-      .video-gallery,
       .three-columns,
       .services-section {
         flex-direction: column;
@@ -226,24 +202,13 @@
     <p>we make the stars align</p>
   </div>
 
-  <!-- Updated Video Gallery Section -->
-  <div class="video-gallery">
-    <div class="video-card">
-      <video src="video1.mp4" controls muted></video>
-    </div>
-    <div class="video-card">
-      <video src="video2.mp4" controls muted></video>
-    </div>
-    <div class="video-card">
-      <video src="video3.mp4" controls muted></video>
-    </div>
+  <!-- Hero Video Fullscreen Section -->
+  <div class="hero-video-section">
+    <video src="hero-video.mp4" autoplay muted loop playsinline></video>
   </div>
 
   <!-- Services Section -->
   <section class="services-section">
-    <div class="phone-svg">
-      <video src="your-video.mp4" controls autoplay muted loop></video>
-    </div>
     <div class="services-description">
       <h2>We Are Cenauri</h2>
       <p>We are a creative media agency with elite-level strategies in social media marketing, content creation, and modern business storytelling.</p>
