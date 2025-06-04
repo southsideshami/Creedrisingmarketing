@@ -63,26 +63,58 @@
     }
 
     .services-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: 5rem 2rem;
-      background-color: var(--blue);
-      color: var(--white);
-      text-align: center;
+      background-color: var(--white);
+      gap: 4rem;
+      flex-wrap: wrap;
     }
 
-    .services-section h2 {
+    .services-video {
+      max-width: 300px;
+      position: relative;
+    }
+
+    .services-video video {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      border: 10px solid black;
+      background: black;
+    }
+
+    .services-description {
+      max-width: 500px;
+    }
+
+    .services-description h2 {
       font-size: 3rem;
-      font-weight: bold;
-      margin-bottom: 2rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      font-style: italic;
+      margin-bottom: 1rem;
     }
 
-    .services-section ul {
-      text-align: left;
-      max-width: 900px;
-      margin: 0 auto;
-      font-size: 1.4rem;
-      line-height: 2.2;
+    .services-description p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .services-description button {
+      background: none;
+      border: 2px solid var(--red);
+      color: var(--red);
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .services-description button:hover {
+      background: var(--red);
+      color: var(--white);
     }
 
     .three-columns {
@@ -164,9 +196,11 @@
 
     @media (max-width: 768px) {
       .video-row,
-      .three-columns {
+      .three-columns,
+      .services-section {
         flex-direction: column;
         align-items: center;
+        text-align: center;
       }
 
       .video-frame iframe {
@@ -203,17 +237,18 @@
     </div>
   </div>
 
-  <!-- Services Section -->
+  <!-- Services Section Redesigned -->
   <section class="services-section">
-    <h2>What We Offer</h2>
-    <ul>
-      <li>✔ Comprehensive Social Media Management</li>
-      <li>✔ Cinematic Content & Cinematography Services</li>
-      <li>✔ Custom Web Development Solutions</li>
-      <li>✔ Strategic Content Creation & Brand Storytelling</li>
-      <li>✔ Your One-Stop Shop for All Business Media Needs</li>
-      <li>✔ We help your brand become visible to the right audience & customers</li>
-    </ul>
+    <div class="services-video">
+      <video src="your-video.mp4" controls autoplay muted loop></video>
+    </div>
+    <div class="services-description">
+      <h2>We Are Cenauri</h2>
+      <p>We are a creative media agency with elite-level strategies in social media marketing, content creation, and modern business storytelling.</p>
+      <p>We help businesses stand out through smart, visually-driven campaigns across all digital platforms.</p>
+      <p>From branding to full-service content production—we're the one-stop solution for your business visibility.</p>
+      <button>Get in touch →</button>
+    </div>
   </section>
 
   <!-- Breakdown Columns -->
