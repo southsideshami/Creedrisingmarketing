@@ -126,6 +126,13 @@
       padding: 3rem 2rem;
       background-color: var(--white);
       text-align: center;
+      animation: scrollLeftRight 10s linear infinite;
+    }
+
+    @keyframes scrollLeftRight {
+      0% { transform: translateX(-10%); opacity: 0; }
+      50% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(10%); opacity: 0; }
     }
 
     .column {
