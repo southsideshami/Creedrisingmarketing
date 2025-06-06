@@ -120,17 +120,22 @@
     }
 
     .three-columns {
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-      padding: 3rem 2rem;
-      background-color: var(--white);
-      text-align: center;
-      animation: scrollLeftRight 10s linear infinite;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 3rem 2rem;
+  background-color: var(--white);
+  text-align: center;
+  animation: scrollLeftRight 20s linear infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
     }
 
     @keyframes scrollLeftRight {
-  0% { transform: rotateY(0deg); }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
   100% { transform: rotateY(360deg); }
 }
       50% { transform: translateX(0); opacity: 1; }
