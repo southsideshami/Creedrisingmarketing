@@ -120,40 +120,26 @@
     }
 
     .three-columns {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  padding: 3rem 2rem;
-  background-color: var(--white);
-  text-align: center;
-  animation: scrollLeftRight 10s linear infinite;
-}
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    @keyframes scrollLeftRight {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(10%); opacity: 1; }
-  100% { transform: translateX(0); opacity: 1; }
-}
-  100% { transform: translateX(-100%); }
-}
-  100% { transform: rotateY(360deg); }
-}
-      50% { transform: translateX(0); opacity: 1; }
-      100% { transform: translateX(10%); opacity: 0; }
+    .three-columns h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
     }
 
-    .column {
-      max-width: 300px;
-    }
-
-    .column h3 {
-      margin: 1rem 0 0.5rem;
-      font-size: 1.5rem;
-    }
-
-    .column p {
-      font-size: 1rem;
+    .three-columns ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
     }
 
     .contact-section {
@@ -255,24 +241,17 @@
     </div>
   </section>
 
-  <!-- Breakdown Columns -->
-  <section class="three-columns" style="display: flex; flex-direction: column; align-items: center; padding: 4rem 2rem;">
-  <div style="width: 100%; max-width: 800px; text-align: center; margin-bottom: 2rem;">
-    <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem;">The Impact of Social Media</h2>
-    <p style="font-size: 1.1rem; line-height: 1.6;">Social media has revolutionized how brands connect with audiences. It has shifted marketing from static messaging to dynamic, real-time conversations. Businesses now thrive on engagement, community, and storytelling—transforming passive consumers into active brand advocates.</p>
-  </div>
-  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 3rem; max-width: 1200px; width: 100%; text-align: center;">>
-      <h3>Content Creation</h3>
-      <p>Enhance brand identity and engage audiences with compelling, strategic content creation.</p>
-    </div>
-    <div class="column">
-      <h3>Community Management</h3>
-      <p>Boost engagement and relationships via nurturing involved, goal-aligned communities.</p>
-    </div>
-    <div class="column">
-      <h3>Social Presence</h3>
-      <p>Elevate visibility and impact through a robust, loyal, and interactive digital presence.</p>
-    </div>
+  <!-- What We Offer (Bullet Points) -->
+  <section class="three-columns">
+    <h2>What We Offer</h2>
+    <ul>
+      <li>✔ Comprehensive Social Media Management</li>
+      <li>✔ Cinematic Content & Cinematography Services</li>
+      <li>✔ Custom Web Development Solutions</li>
+      <li>✔ Strategic Content Creation & Brand Storytelling</li>
+      <li>✔ Your One-Stop Shop for All Business Media Needs</li>
+      <li>✔ We help your brand become visible to the right audience & customers</li>
+    </ul>
   </section>
 
   <!-- Contact Us Section -->
@@ -287,7 +266,7 @@
         <option value="">Market to contact*</option>
         <option value="uk">United Kingdom</option>
         <option value="us">United States</option>
-        <option value="eu">european union</</option>
+        <option value="eu">european union</option>
       </select>
       <select required>
         <option value="">Contact reason*</option>
