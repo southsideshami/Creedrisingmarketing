@@ -129,7 +129,7 @@
 
     .three-columns {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: 1fr;
       gap: 2rem;
       padding: 4rem 2rem;
       max-width: 1000px;
@@ -137,21 +137,25 @@
     }
 
     .three-columns h2 {
-      grid-column: span 2;
+      text-align: center;
       font-size: 2.2rem;
       font-weight: 700;
-      margin-bottom: 1.5rem;
-      text-align: center;
+      margin-bottom: 2rem;
     }
 
-    .three-columns ul {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.5rem 2rem;
-      list-style: disc;
-      padding-left: 1.5rem;
+    .three-columns .offering {
+      margin-bottom: 2rem;
+    }
+
+    .three-columns .offering h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .three-columns .offering p {
       font-size: 1.1rem;
-      line-height: 1.8;
+      line-height: 1.6;
     }
 
     .contact-section {
@@ -218,7 +222,7 @@
     }
 
     @media (max-width: 768px) {
-      .three-columns ul {
+      .three-columns {
         grid-template-columns: 1fr;
       }
     }
@@ -227,20 +231,20 @@
 <body>
   <div class="top-left-logo" style="line-height: 1.2; margin-bottom: 1rem;">
     <h1>CENTAURI</h1>
-    <p>MEDIA AGENCY</p>
+    <p style="text-align:center;">MEDIA AGENCY</p>
   </div>
 
   <!-- Hero Video Grid Section -->
-  <h2 class="video-section-title">'We make the stars align</h2>
+  <h2 class="video-section-title">Our Work in Motion</h2>
   <div class="video-grid">
     <div class="video-card">
-      <video src="dskitchen.mp4-2-2.mov" autoplay loop muted playsinline></video>
+      <video src="video1.mp4" autoplay loop muted playsinline></video>
     </div>
     <div class="video-card">
-      <video src="sanis.mp4-2.mov" autoplay loop muted playsinline></video>
+      <video src="video2.mp4" autoplay loop muted playsinline></video>
     </div>
     <div class="video-card">
-      <video src="sharahgrill.mp4-2-2.mov" autoplay loop muted playsinline></video>
+      <video src="video3.mp4" autoplay loop muted playsinline></video>
     </div>
   </div>
 
@@ -258,17 +262,33 @@
     </div>
   </section>
 
-  <!-- What We Offer (Bullet Points) -->
+  <!-- What We Offer (Rewritten as Paragraphs) -->
   <section class="three-columns">
     <h2>What We Offer</h2>
-    <ul>
-      <li>✔ Comprehensive Social Media Management</li>
-      <li>✔ Cinematic Content & Cinematography Services</li>
-      <li>✔ Custom Web Development Solutions</li>
-      <li>✔ Strategic Content Creation & Brand Storytelling</li>
-      <li>✔ Your One-Stop Shop for All Business Media Needs</li>
-      <li>✔ We help your brand become visible to the right audience & customers</li>
-    </ul>
+    <div class="offering">
+      <h3>Social Media Management</h3>
+      <p>We take full ownership of your social platforms—curating, scheduling, and optimising content to grow your presence and engage your community effectively.</p>
+    </div>
+    <div class="offering">
+      <h3>Cinematic Content Creation</h3>
+      <p>Our team produces stunning visual stories—cinematic campaigns and motion assets that reflect the soul of your brand and convert attention into loyalty.</p>
+    </div>
+    <div class="offering">
+      <h3>Web Development Solutions</h3>
+      <p>Whether you need a brand-new website or a digital facelift, our developers blend design, usability, and performance to deliver seamless user experiences.</p>
+    </div>
+    <div class="offering">
+      <h3>Content Strategy & Storytelling</h3>
+      <p>We craft brand stories with emotional depth, using strategy-first thinking to deliver content that resonates and converts across all media platforms.</p>
+    </div>
+    <div class="offering">
+      <h3>All-in-One Media Hub</h3>
+      <p>From campaign planning to final execution, we offer a complete suite of media services to manage and scale your business visibility in one place.</p>
+    </div>
+    <div class="offering">
+      <h3>Audience Visibility</h3>
+      <p>We use audience insights and targeted marketing to ensure your brand reaches the right people—boosting discoverability and customer growth.</p>
+    </div>
   </section>
 
   <!-- Contact Us Section -->
