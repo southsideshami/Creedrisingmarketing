@@ -176,18 +176,13 @@
 
     .contact-section form {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 1rem;
-      max-width: 1000px;
+      max-width: 600px;
       margin: 0 auto;
     }
 
-    .contact-section form textarea {
-      grid-column: span 2;
-    }
-
     .contact-section input,
-    .contact-section select,
     .contact-section textarea {
       padding: 0.8rem;
       border: none;
@@ -196,7 +191,6 @@
     }
 
     .contact-section button {
-      grid-column: span 2;
       padding: 0.8rem;
       background-color: var(--white);
       color: var(--blue);
@@ -295,23 +289,8 @@
   <section class="contact-section" id="contact">
     <h2>Let's Be Social</h2>
     <form>
-      <input type="text" placeholder="First Name*" required />
-      <input type="text" placeholder="Last Name*" required />
-      <input type="email" placeholder="Work email*" required />
-      <input type="text" placeholder="Job Title" />
-      <select required>
-        <option value="">Market to contact*</option>
-        <option value="uk">United Kingdom</option>
-        <option value="us">United States</option>
-        <option value="eu">Europe</option>
-      </select>
-      <select required>
-        <option value="">Contact reason*</option>
-        <option value="inquiry">Business Inquiry</option>
-        <option value="support">Support</option>
-      </select>
-      <input type="text" placeholder="Email subject*" required />
-      <input type="text" placeholder="CC" />
+      <input type="text" placeholder="Name*" required />
+      <input type="email" placeholder="Email*" required />
       <textarea rows="4" placeholder="Your message*" required></textarea>
       <button type="submit">Send Message</button>
     </form>
