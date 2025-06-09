@@ -24,9 +24,15 @@
       color: var(--blue);
     }
 
-    .top-left-logo {
-      margin: 40px 20px 20px 20px;
+    /* Top banner with logo inside */
+    .top-banner {
+      background-color: var(--blue);
+      width: 100%;
+      padding: 30px 0;
       text-align: center;
+    }
+
+    .top-left-logo {
       line-height: 1.2;
     }
 
@@ -34,7 +40,7 @@
       font-size: 3rem;
       font-weight: 900;
       font-family: 'Anton', sans-serif;
-      color: var(--blue);
+      color: var(--white);
       text-transform: uppercase;
       letter-spacing: 2px;
       margin: 0;
@@ -44,7 +50,7 @@
       font-size: 1rem;
       font-weight: 600;
       font-family: 'Segoe UI', sans-serif;
-      color: var(--blue);
+      color: var(--white);
       letter-spacing: 1.5px;
       margin: 0;
     }
@@ -237,30 +243,32 @@
   </style>
 </head>
 <body>
-  <!-- Logo Header -->
-  <div class="top-left-logo">
-    <h1>CENTAURI</h1>
-    <p>MEDIA AGENCY</p>
+  <!-- Top Banner with Logo -->
+  <div class="top-banner">
+    <div class="top-left-logo">
+      <h1>CENTAURI</h1>
+      <p>MEDIA AGENCY</p>
+    </div>
   </div>
 
   <!-- Video Section -->
-  <h2 class="video-section-title">We make the stars align</h2>
+  <h2 class="video-section-title">Our Work in Motion</h2>
   <div class="video-grid">
     <div class="video-card">
-      <video src="dskitchen.mp4-2-2-2.mov" autoplay loop muted playsinline preload="auto"></video>
+      <video src="video1.mp4" autoplay loop muted playsinline preload="auto"></video>
     </div>
     <div class="video-card">
-      <video src="sanis.mp4-2-2.mov" autoplay loop muted playsinline preload="auto"></video>
+      <video src="video2.mp4" autoplay loop muted playsinline preload="auto"></video>
     </div>
     <div class="video-card">
-      <video src="sharahgrill.mp4-2-2-2-2.mov" autoplay loop muted playsinline preload="auto"></video>
+      <video src="video3.mp4" autoplay loop muted playsinline preload="auto"></video>
     </div>
   </div>
 
   <!-- Services Section -->
   <section class="services-section">
     <div class="phone-svg">
-      <video src="phone-video.mp4-2-2.mov" autoplay loop muted playsinline preload="auto"></video>
+      <video src="phone-video.mp4" autoplay loop muted playsinline preload="auto"></video>
     </div>
     <div class="services-description">
       <h2>We Are Centauri</h2>
