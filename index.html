@@ -27,7 +27,8 @@
     .top-left-logo {
       position: fixed;
       top: 20px;
-      left: 20px;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 1000;
       text-align: center;
     }
@@ -129,31 +130,43 @@
 
     .three-columns {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-areas: 
+        ". top ."
+        "left center right"
+        ". bottom .";
       gap: 2rem;
       padding: 4rem 2rem;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
+      text-align: center;
     }
 
     .three-columns h2 {
-      text-align: center;
+      grid-column: 1 / -1;
       font-size: 2.2rem;
       font-weight: 700;
       margin-bottom: 2rem;
     }
 
-    .three-columns .offering {
-      margin-bottom: 2rem;
+    .offering {
+      background: #f1f4f8;
+      padding: 1.5rem;
+      border-radius: 8px;
     }
 
-    .three-columns .offering h3 {
+    .top { grid-area: top; }
+    .left { grid-area: left; }
+    .center { grid-area: center; }
+    .right { grid-area: right; }
+    .bottom { grid-area: bottom; }
+
+    .offering h3 {
       font-size: 1.5rem;
       font-weight: bold;
       margin-bottom: 0.5rem;
     }
 
-    .three-columns .offering p {
+    .offering p {
       font-size: 1.1rem;
       line-height: 1.6;
     }
@@ -217,7 +230,7 @@
 
     @media (max-width: 768px) {
       .three-columns {
-        grid-template-columns: 1fr;
+        grid-template-areas: "top" "left" "center" "right" "bottom";
       }
     }
   </style>
@@ -229,23 +242,23 @@
   </div>
 
   <!-- Hero Video Grid Section -->
-  <h2 class="video-section-title">We make the stars align</h2>
+  <h2 class="video-section-title">Our Work in Motion</h2>
   <div class="video-grid">
     <div class="video-card">
-      <video src="dskitchen.mp4-2-2.mov" autoplay loop muted playsinline></video>
+      <video src="video1.mp4" autoplay loop muted playsinline></video>
     </div>
     <div class="video-card">
-      <video src="sanis.mp4-2.mov" autoplay loop muted playsinline></video>
+      <video src="video2.mp4" autoplay loop muted playsinline></video>
     </div>
     <div class="video-card">
-      <video src="sharahgrill.mp4-2-2.mov" autoplay loop muted playsinline></video>
+      <video src="video3.mp4" autoplay loop muted playsinline></video>
     </div>
   </div>
 
   <!-- Services Section -->
   <section class="services-section">
     <div class="phone-svg">
-      <video src="phone-video.mp4-2-2.mov" autoplay loop muted playsinline></video>
+      <video src="phone-video.mp4" autoplay loop muted playsinline></video>
     </div>
     <div class="services-description">
       <h2>We Are Centauri</h2>
@@ -256,32 +269,28 @@
     </div>
   </section>
 
-  <!-- What We Offer (Rewritten as Paragraphs) -->
+  <!-- What We Offer (Diamond Layout) -->
   <section class="three-columns">
     <h2>What We Offer</h2>
-    <div class="offering">
+    <div class="offering top">
       <h3>Social Media Management</h3>
       <p>We take full ownership of your social platforms—curating, scheduling, and optimising content to grow your presence and engage your community effectively.</p>
     </div>
-    <div class="offering">
+    <div class="offering left">
       <h3>Cinematic Content Creation</h3>
       <p>Our team produces stunning visual stories—cinematic campaigns and motion assets that reflect the soul of your brand and convert attention into loyalty.</p>
     </div>
-    <div class="offering">
+    <div class="offering center">
       <h3>Web Development Solutions</h3>
       <p>Whether you need a brand-new website or a digital facelift, our developers blend design, usability, and performance to deliver seamless user experiences.</p>
     </div>
-    <div class="offering">
-      <h3>Content Strategy & Storytelling</h3>
-      <p>We craft brand stories with emotional depth, using strategy-first thinking to deliver content that resonates and converts across all media platforms.</p>
-    </div>
-    <div class="offering">
+    <div class="offering right">
       <h3>All-in-One Media Hub</h3>
       <p>From campaign planning to final execution, we offer a complete suite of media services to manage and scale your business visibility in one place.</p>
     </div>
-    <div class="offering">
-      <h3>Audience Visibility</h3>
-      <p>We use audience insights and targeted marketing to ensure your brand reaches the right people—boosting discoverability and customer growth.</p>
+    <div class="offering bottom">
+      <h3>Campaigns</h3>
+      <p>We bring your event campaigns and visual projects to life. Each campaign is more than just a task—it’s our best work, infused with planning, care, and precision. No campaign is too big or too complex. With Centauri, everything falls into place, just as envisioned.</p>
     </div>
   </section>
 
