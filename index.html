@@ -57,15 +57,14 @@
 
     .video-strip {
       display: flex;
-      justify-content: space-between;
+      height: 600px;
       margin-top: 100px;
-      padding: 0;
     }
 
     .video-strip video {
-      width: 33.333%;
-      height: 400px;
+      flex: 1;
       object-fit: cover;
+      height: 100%;
     }
 
     .services-section {
@@ -237,15 +236,15 @@
 
   <!-- Hero 3-way video strip -->
   <div class="video-strip">
-    <video src="dskitchen.mp4-2-2.mov" autoplay loop playsinline controls></video>
-    <video src="sanis.mp4-2.mov" autoplay loop playsinline controls></video>
-    <video src="sharahgrill.mp4-2-2.mov" autoplay loop playsinline controls></video>
+    <video src="dskitchen.mp4-2-2.mov" autoplay loop playsinline muted></video>
+    <video src="sanis.mp4-2.mov" autoplay loop playsinline muted></video>
+    <video src="sharahgrill.mp4.-2-2.mov" autoplay loop playsinline muted></video>
   </div>
 
   <!-- Services Section -->
   <section class="services-section">
     <div class="phone-svg">
-      <video src="phone-video.mp4-2-2.mov" autoplay loop playsinline controls></video>
+      <video src="phone-video.mp4-2-2.mov" autoplay loop playsinline muted></video>
     </div>
     <div class="services-description">
       <h2>We Are Centauri</h2>
