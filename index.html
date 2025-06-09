@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CENTAURI MEDIA</title>
@@ -25,29 +25,31 @@
     }
 
     .top-left-logo {
-      position: absolute;
+      position: fixed;
       top: 20px;
       left: 20px;
       z-index: 1000;
-      text-align: left;
+      text-align: center;
+      line-height: 1.2;
     }
 
     .top-left-logo h1 {
-      font-size: 2rem;
+      font-size: 3rem;
       font-weight: 900;
       font-family: 'Anton', sans-serif;
       color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 2px;
+      margin: 0;
     }
 
     .top-left-logo p {
-      font-size: 0.8rem;
-      font-weight: 500;
+      font-size: 1rem;
+      font-weight: 600;
       font-family: 'Segoe UI', sans-serif;
-      letter-spacing: 2px;
+      color: var(--blue);
+      letter-spacing: 1.5px;
       margin: 0;
-      text-align: left;
     }
 
     .video-section-title {
@@ -238,12 +240,11 @@
   </style>
 </head>
 <body>
-  <div class="top-left-logo" style="line-height: 1.2; margin-bottom: 1rem;">
+  <div class="top-left-logo">
     <h1>CENTAURI</h1>
-    <p style="text-align:left;">MEDIA AGENCY</p>
+    <p>MEDIA AGENCY</p>
   </div>
 
-  <!-- Hero Video Grid Section -->
   <h2 class="video-section-title">Our Work in Motion</h2>
   <div class="video-grid">
     <div class="video-card">
@@ -257,7 +258,6 @@
     </div>
   </div>
 
-  <!-- Services Section -->
   <section class="services-section">
     <div class="phone-svg">
       <video src="phone-video.mp4" autoplay loop muted playsinline></video>
@@ -267,11 +267,10 @@
       <p><strong>We make businesses unforgettable.</strong></p>
       <p>Through bold storytelling, strategic design, and cinematic content, we amplify your brand’s voice in the digital noise.</p>
       <p><em>Your story. Our mission. Let’s make it visual.</em></p>
-      <p>Centauri is more than just a media agency. We are a powerhouse of creative thinkers, problem-solvers, and cultural translators. We specialize in transforming vision into tangible digital experiences—from scroll-stopping content to data-driven campaigns that move the needle. Whether you're an emerging brand looking to make your mark or an established company in need of a reinvention, we partner with you to build a story the world won’t forget.</p>
+      <p>Centauri is more than just a media agency. We are a powerhouse of creative thinkers, problem-solvers, and cultural translators. We specialize in transforming vision into tangible digital experiences—from scroll-stopping content to data-driven campaigns that move the needle.</p>
     </div>
   </section>
 
-  <!-- What We Offer (Structured Layout) -->
   <section class="three-columns">
     <div class="offering">
       <h3>Social Media Management</h3>
@@ -283,7 +282,7 @@
     </div>
     <div class="offering">
       <h3>Campaigns</h3>
-      <p>We bring your event campaigns and visual projects to life. Each campaign is more than just a task—it’s our best work, infused with planning, care, and precision. No campaign is too big or too complex. With Centauri, everything falls into place, just as envisioned.</p>
+      <p>We bring your event campaigns and visual projects to life. Each campaign is our best work, infused with planning, care, and precision.</p>
     </div>
     <div class="offering">
       <h3>Web Development Solutions</h3>
@@ -295,14 +294,12 @@
     </div>
   </section>
 
-  <!-- Social Icons -->
   <div class="social-icons">
     <a href="https://www.instagram.com/centaurima/?igsh=NnhuMjRidmE1cDB1&utm_source=qr" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
     <a href="https://www.tiktok.com/@centaurima?_t=ZN-8x46gLpmwZa&_r=1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok"></a>
     <a href="https://x.com/centaurimedia_?s=21" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="Twitter"></a>
   </div>
 
-  <!-- Contact Us Section -->
   <section class="contact-section" id="contact">
     <h2>Let's Be Social</h2>
     <form>
