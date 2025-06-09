@@ -32,15 +32,40 @@
     }
 
     .top-left-logo h1 {
-      font-size: 2rem;
-      font-weight: bold;
+      font-size: 2.5rem;
+      font-weight: 900;
+      font-family: 'Anton', sans-serif;
       color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .top-left-logo p {
+      font-size: 0.8rem;
+      font-weight: 500;
+      font-family: 'Segoe UI', sans-serif;
+      letter-spacing: 2px;
+      margin-left: 10px;
+    }
+
+    .top-left-logo .slogan {
       font-size: 1rem;
       font-style: italic;
       color: var(--blue);
+      margin-top: 0.2rem;
+    }
+
+    .video-strip {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 100px;
+      padding: 0;
+    }
+
+    .video-strip video {
+      width: 33.333%;
+      height: 400px;
+      object-fit: cover;
     }
 
     .services-section {
@@ -182,10 +207,15 @@
 
     @media (max-width: 768px) {
       .three-columns,
-      .services-section {
+      .services-section,
+      .video-strip {
         flex-direction: column;
         align-items: center;
         text-align: center;
+      }
+
+      .video-strip video {
+        width: 100%;
       }
 
       .contact-section form {
@@ -200,15 +230,22 @@
 </head>
 <body>
   <div class="top-left-logo" style="line-height: 1.2;">
-  <h1 style="font-size: 2.5rem; font-weight: 900; font-family: 'Anton', sans-serif; text-transform: uppercase; letter-spacing: 2px;">CENTAURI</h1>
-  <p style="font-size: 0.8rem; font-weight: 500; font-family: 'Segoe UI', sans-serif; letter-spacing: 2px; margin-left: 10px;">MEDIA AGENCY</p>
-  <p style="font-size: 1rem; font-style: italic; color: var(--blue); margin-top: 0.2rem;">"We make the stars align"</p>
-</div>
+    <h1>CENTAURI</h1>
+    <p>MEDIA AGENCY</p>
+    <p class="slogan">"We make the stars align"</p>
+  </div>
+
+  <!-- Hero 3-way video strip -->
+  <div class="video-strip">
+    <video src="video1.mp4" autoplay loop muted playsinline></video>
+    <video src="video2.mp4" autoplay loop muted playsinline></video>
+    <video src="video3.mp4" autoplay loop muted playsinline></video>
+  </div>
 
   <!-- Services Section -->
   <section class="services-section">
     <div class="phone-svg">
-      <video src="phone-video.mp4-2-2.mov" autoplay loop controls></video>
+      <video src="phone-video.mp4-2-2.mov" autoplay loop muted playsinline></video>
     </div>
     <div class="services-description">
       <h2>We Are Centauri</h2>
@@ -244,7 +281,7 @@
         <option value="">Market to contact*</option>
         <option value="uk">United Kingdom</option>
         <option value="us">United States</option>
-        <option value="eu">Europe</option>
+        <option value="eu">eEurope</option>
       </select>
       <select required>
         <option value="">Contact reason*</option>
