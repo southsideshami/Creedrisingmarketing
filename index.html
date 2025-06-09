@@ -25,7 +25,7 @@
     }
 
     .top-left-logo {
-      position: fixed;
+      position: absolute;
       top: 20px;
       left: 20px;
       z-index: 1000;
@@ -128,17 +128,13 @@
     }
 
     .three-columns {
-      display: grid;
-      grid-template-areas: 
-        ". a ."
-        "b . c"
-        ". d ."
-        ". . e";
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
       max-width: 1000px;
       margin: 2rem auto;
-      padding: 1rem;
     }
 
     .offering {
@@ -147,6 +143,7 @@
       border-radius: 8px;
       text-align: center;
       font-size: 0.95rem;
+      width: 300px;
     }
 
     .offering h3 {
@@ -159,12 +156,6 @@
       font-size: 0.95rem;
       line-height: 1.4;
     }
-
-    .three-columns .offering:nth-child(1) { grid-area: a; }
-    .three-columns .offering:nth-child(2) { grid-area: b; }
-    .three-columns .offering:nth-child(3) { grid-area: c; }
-    .three-columns .offering:nth-child(4) { grid-area: d; }
-    .three-columns .offering:nth-child(5) { grid-area: e; }
 
     .contact-section {
       padding: 4rem 2rem;
@@ -222,13 +213,14 @@
     }
 
     .social-icons a {
-      margin: 0 8px;
+      margin: 0 10px;
       display: inline-block;
+      filter: brightness(0) saturate(100%) invert(16%) sepia(92%) saturate(6820%) hue-rotate(205deg) brightness(92%) contrast(98%);
     }
 
     .social-icons img {
-      width: 24px;
-      height: 24px;
+      width: 28px;
+      height: 28px;
     }
 
     footer {
@@ -240,9 +232,7 @@
 
     @media (max-width: 768px) {
       .three-columns {
-        display: flex;
         flex-direction: column;
-        align-items: center;
       }
     }
   </style>
@@ -281,7 +271,7 @@
     </div>
   </section>
 
-  <!-- What We Offer (Diamond Layout) -->
+  <!-- What We Offer (Structured Layout) -->
   <section class="three-columns">
     <div class="offering">
       <h3>Social Media Management</h3>
@@ -292,16 +282,16 @@
       <p>Our team produces stunning visual stories—cinematic campaigns and motion assets that reflect the soul of your brand and convert attention into loyalty.</p>
     </div>
     <div class="offering">
+      <h3>Campaigns</h3>
+      <p>We bring your event campaigns and visual projects to life. Each campaign is more than just a task—it’s our best work, infused with planning, care, and precision. No campaign is too big or too complex. With Centauri, everything falls into place, just as envisioned.</p>
+    </div>
+    <div class="offering">
       <h3>Web Development Solutions</h3>
       <p>Whether you need a brand-new website or a digital facelift, our developers blend design, usability, and performance to deliver seamless user experiences.</p>
     </div>
     <div class="offering">
       <h3>All-in-One Media Hub</h3>
       <p>From campaign planning to final execution, we offer a complete suite of media services to manage and scale your business visibility in one place.</p>
-    </div>
-    <div class="offering">
-      <h3>Campaigns</h3>
-      <p>We bring your event campaigns and visual projects to life. Each campaign is more than just a task—it’s our best work, infused with planning, care, and precision. No campaign is too big or too complex. With Centauri, everything falls into place, just as envisioned.</p>
     </div>
   </section>
 
