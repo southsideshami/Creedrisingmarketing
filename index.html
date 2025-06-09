@@ -129,20 +129,16 @@
     }
 
     .three-columns {
-      display: grid;
-      grid-template-areas: 
-        ". top ."
-        "left center right"
-        ". bottom .";
-      gap: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 4rem 2rem;
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
       text-align: center;
     }
 
     .three-columns h2 {
-      grid-column: 1 / -1;
       font-size: 2.2rem;
       font-weight: 700;
       margin-bottom: 2rem;
@@ -152,13 +148,9 @@
       background: #f1f4f8;
       padding: 1.5rem;
       border-radius: 8px;
+      margin: 1rem 0;
+      width: 100%;
     }
-
-    .top { grid-area: top; }
-    .left { grid-area: left; }
-    .center { grid-area: center; }
-    .right { grid-area: right; }
-    .bottom { grid-area: bottom; }
 
     .offering h3 {
       font-size: 1.5rem;
@@ -230,7 +222,7 @@
 
     @media (max-width: 768px) {
       .three-columns {
-        grid-template-areas: "top" "left" "center" "right" "bottom";
+        padding: 2rem 1rem;
       }
     }
   </style>
@@ -269,26 +261,26 @@
     </div>
   </section>
 
-  <!-- What We Offer (Diamond Layout) -->
+  <!-- What We Offer (Standard Layout) -->
   <section class="three-columns">
     <h2>What We Offer</h2>
-    <div class="offering top">
+    <div class="offering">
       <h3>Social Media Management</h3>
       <p>We take full ownership of your social platforms—curating, scheduling, and optimising content to grow your presence and engage your community effectively.</p>
     </div>
-    <div class="offering left">
+    <div class="offering">
       <h3>Cinematic Content Creation</h3>
       <p>Our team produces stunning visual stories—cinematic campaigns and motion assets that reflect the soul of your brand and convert attention into loyalty.</p>
     </div>
-    <div class="offering center">
+    <div class="offering">
       <h3>Web Development Solutions</h3>
       <p>Whether you need a brand-new website or a digital facelift, our developers blend design, usability, and performance to deliver seamless user experiences.</p>
     </div>
-    <div class="offering right">
+    <div class="offering">
       <h3>All-in-One Media Hub</h3>
       <p>From campaign planning to final execution, we offer a complete suite of media services to manage and scale your business visibility in one place.</p>
     </div>
-    <div class="offering bottom">
+    <div class="offering">
       <h3>Campaigns</h3>
       <p>We bring your event campaigns and visual projects to life. Each campaign is more than just a task—it’s our best work, infused with planning, care, and precision. No campaign is too big or too complex. With Centauri, everything falls into place, just as envisioned.</p>
     </div>
