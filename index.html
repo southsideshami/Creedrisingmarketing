@@ -128,27 +128,24 @@
     }
 
     .three-columns {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 4rem 2rem;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .three-columns h2 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
+      display: grid;
+      grid-template-areas: 
+        ". a ."
+        "b . c"
+        ". d ."
+        ". . e";
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 2rem;
     }
 
     .offering {
       background: #f1f4f8;
       padding: 1.5rem;
       border-radius: 8px;
-      margin: 1rem 0;
-      width: 100%;
+      text-align: center;
     }
 
     .offering h3 {
@@ -161,6 +158,12 @@
       font-size: 1.1rem;
       line-height: 1.6;
     }
+
+    .three-columns .offering:nth-child(1) { grid-area: a; }
+    .three-columns .offering:nth-child(2) { grid-area: b; }
+    .three-columns .offering:nth-child(3) { grid-area: c; }
+    .three-columns .offering:nth-child(4) { grid-area: d; }
+    .three-columns .offering:nth-child(5) { grid-area: e; }
 
     .contact-section {
       padding: 4rem 2rem;
@@ -212,6 +215,21 @@
       color: var(--white);
     }
 
+    .social-icons {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .social-icons img {
+      width: 32px;
+      height: 32px;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -221,7 +239,9 @@
 
     @media (max-width: 768px) {
       .three-columns {
-        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -260,9 +280,8 @@
     </div>
   </section>
 
-  <!-- What We Offer (Standard Layout) -->
+  <!-- What We Offer (Diamond Layout) -->
   <section class="three-columns">
-    <h2>What We Offer</h2>
     <div class="offering">
       <h3>Social Media Management</h3>
       <p>We take full ownership of your social platforms—curating, scheduling, and optimising content to grow your presence and engage your community effectively.</p>
@@ -284,6 +303,13 @@
       <p>We bring your event campaigns and visual projects to life. Each campaign is more than just a task—it’s our best work, infused with planning, care, and precision. No campaign is too big or too complex. With Centauri, everything falls into place, just as envisioned.</p>
     </div>
   </section>
+
+  <!-- Social Icons -->
+  <div class="social-icons">
+    <a href="https://www.instagram.com/centaurima/?igsh=NnhuMjRidmE1cDB1&utm_source=qr" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
+    <a href="https://www.tiktok.com/@centaurima?_t=ZN-8x46gLpmwZa&_r=1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok"></a>
+    <a href="https://x.com/centaurimedia_?s=21" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="Twitter"></a>
+  </div>
 
   <!-- Contact Us Section -->
   <section class="contact-section" id="contact">
