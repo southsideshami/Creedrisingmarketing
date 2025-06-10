@@ -134,25 +134,35 @@
     }
 
     .three-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
       max-width: 1000px;
       margin: 2rem auto;
-      padding: 0 1rem;
-      text-align: center;
     }
 
     .offering {
-      margin-bottom: 2rem;
+      background: #f1f4f8;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 0.95rem;
+      width: 300px;
+      display: inline-block;
+      vertical-align: top;
     }
 
     .offering h3 {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: bold;
       margin-bottom: 0.5rem;
     }
 
     .offering p {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 0.95rem;
+      line-height: 1.4;
     }
 
     .contact-section {
@@ -230,7 +240,8 @@
 
     @media (max-width: 768px) {
       .three-columns {
-        text-align: left;
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -245,23 +256,23 @@
   </div>
 
   <!-- Video Section -->
-  <h2 class="video-section-title">Our Work in Motion</h2>
+  <h2 class="video-section-title">We make the stars align</h2>
   <div class="video-grid">
     <div class="video-card">
-      <video src="video1.mp4" autoplay loop muted playsinline preload="auto"></video>
+      <video src="dskitchen.mp4-2-2-2.mov" autoplay loop muted playsinline preload="auto"></video>
     </div>
     <div class="video-card">
-      <video src="video2.mp4" autoplay loop muted playsinline preload="auto"></video>
+      <video src="sanis.mp4-2-2.mov" autoplay loop muted playsinline preload="auto"></video>
     </div>
     <div class="video-card">
-      <video src="video3.mp4" autoplay loop muted playsinline preload="auto"></video>
+      <video src="sharahgrill.mp4-2-2-2-2.mov" autoplay loop muted playsinline preload="auto"></video>
     </div>
   </div>
 
   <!-- Services Section -->
   <section class="services-section">
     <div class="phone-svg">
-      <video src="phone-video.mp4" autoplay loop muted playsinline preload="auto"></video>
+      <video src="phone-video.mp4-2-2.mov" autoplay loop muted playsinline preload="auto"></video>
     </div>
     <div class="services-description">
       <h2>We Are Centauri</h2>
@@ -272,7 +283,7 @@
     </div>
   </section>
 
-  <!-- Clean Offerings Section -->
+  <!-- Offerings Section -->
   <section class="three-columns">
     <div class="offering">
       <h3>Social Media Management</h3>
@@ -283,7 +294,7 @@
       <p>Our team produces stunning visual stories—cinematic campaigns and motion assets that reflect the soul of your brand and convert attention into loyalty.</p>
     </div>
     <div class="offering">
-      <h3>Event Campaigns</h3>
+      <h3>Campaigns</h3>
       <p>We bring your event campaigns and visual projects to life. Each campaign is our best work, infused with planning, care, and precision.</p>
     </div>
     <div class="offering">
